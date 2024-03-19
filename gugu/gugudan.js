@@ -6,7 +6,7 @@ function printMultipltable(num) {
     }
 }
 for(let i=2; i<=9; i++){
-    console.log(`${i}단`);
+    console.log(`${i}단 `);
     printMultipltable(i);
     
 }
