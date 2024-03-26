@@ -1,0 +1,39 @@
+<html>
+<head>구구단프로그램</head>
+<body>
+<div class="calculator">
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button class="operator" onclick="calculate()">=</button>
+    <div class="display" id="display"></div>
+</div>
+
+<script>
+     function appendToDisplay(number) {
+        ///누르면 나오는 창을 명명하기, 그안에 있는게 숫자임을 알려주기///
+            const display = document.getElementById('display');
+            display.innerText = number;
+        }
+/// 버튼을 누르면 일어나는 것이 '누르면 나오는 창'이 나오는 행동이고 상수로 number변수에 저장하기 (입력한 숫자)//
+        function calculate() {
+            const display = document.getElementById('display');
+            const number = parseInt(display.innerText);
+////결과를 담을 문자열임
+            const result = '';
+///for은 반복하는 루프? 의 역할을 한다고 하는데 이를 활용해, 정수 i(1부터 9까지)를 결과 에 추가..///
+            for (const i = 1; i <= 9; i++) {
+                result += number + ' x ' + i + ' = ' + (number * i) + '<br>';
+            }
+
+            display.innerHTML = result;
+        }
+</script>
+</body>
+</html>

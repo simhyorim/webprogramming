@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    곱합시다
+</head>
+<body>
+<div class="calculator">
+    <div class="display" id="display">0</div>
+    <button onclick="clearDisplay()">다시할래요</button>
+    <button class="operator" onclick="appendToDisplay('*')">곱하기</button>
+    <button class="operator" onclick="appendToDisplay('/')">나누기</button>
+    <button class="operator" onclick="appendToDisplay('+')">더하기</button>
+    <button class="operator" onclick="appendToDisplay('-')">빼기</button>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button class="operator" onclick="calculate()">=</button>
+</div>
+
+<script>
+    function clearDisplay() {
+        document.getElementById('display').innerText = '0';
+    }
+
+    function appendToDisplay(value) {
+        let display = document.getElementById('display');
+        if (display.innerText === '0' && value !== '.') {
+            display.innerText = value;
+        } else {
+            display.innerText += value;
+        }
+    }
+
+    function calculate() {
+        let display = document.getElementById('display');
+        let result = eval(display.innerText);
+        display.innerText = result;
+    }
+</script>
+</body>
+</html>
