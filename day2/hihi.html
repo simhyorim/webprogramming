@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html>
   <head>
     <style>
@@ -165,4 +166,173 @@
       </script>
 
   </body>
+=======
+<html>
+  <head>
+    <style>
+      /* reset css */
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body, div, span, applet, object, iframe,
+      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+      a, abbr, acronym, address, big, cite, code,
+      del, dfn, em, img, ins, kbd, q, s, samp,
+      small, strike, strong, sub, sup, tt, var,
+      b, u, i, center,
+      dl, dt, dd, ol, ul, li,
+      fieldset, form, label, legend,
+      table, caption, tbody, tfoot, thead, tr, th, td,
+      article, aside, canvas, details, embed,
+      figure, figcaption, footer, header, hgroup,
+      menu, nav, output, ruby, section, summary,
+      time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article, aside, details, figcaption, figure,
+      footer, header, hgroup, menu, nav, section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+        font-family:'Noto Serif KR', serif;
+      }
+      ol, ul {
+        list-style: none;
+      }
+      blockquote, q {
+        quotes: none;
+      }
+      blockquote:before, blockquote:after,
+      q:before, q:after {
+        content: '';
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    </style>
+
+    <style>
+      nav {
+        position: fixed;
+        top:0cm;
+        left:0cm;
+
+        display: flex;
+        justify-content:space-between ;
+        width: 100%;
+        height: 100px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: #DBD6D6;
+
+      }
+
+      h1 {
+        font-size: 20px;
+        line-height: 50px;
+        margin-left: 19px;
+        margin-top: 27px;
+        position: 0;
+      }
+      
+
+      button {
+        padding: 10px;
+        border: 0px solid #222;
+        border-radius: 20px;
+        width: 90px;
+        height: 45px;
+        margin-right: 20;
+        margin-top: 32;
+        position: 0;
+        font-family:'Noto Serif KR', serif;
+        background-color: #A58F8F;
+      }
+
+      button:hover {
+        background-color: rgb(255, 250, 250);
+      }
+     
+      section {
+        overflow-y: scroll;
+        margin-top: 127px;  
+        display: flex;
+        justify-content: center; 
+      }
+      img{
+        width:90%;
+        height: 366px;
+        border: 3px #674444;
+        border-radius: 5px;
+      }
+      strong { 
+      font-weight:lighter
+          }
+      
+  </style>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background-color: #000;
+    }
+    .star {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      animation: twinkle 5s infinite linear;
+    }
+    @keyframes twinkle {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+  
+  </head>
+
+  <body>
+    <nav>
+      <h1>이곳은 우주입니다..</h1>
+        <button onclick="window.location.href='./ilovethis.html'">
+          <span>조심히가요</span>
+         </button>
+    </nav>
+    <script>
+        // 별을 생성하고 랜덤한 위치, 크기, 속도로 애니메이션을 적용합니다.
+        function createStar() {
+          const star = document.createElement('div');
+          star.className = 'star';
+          star.style.left = `${Math.random() * 100}vw`;
+          star.style.top = `${Math.random() * 100}vh`;
+          star.style.width = `${Math.random() * 20 + 5}px`;
+          star.style.height = `${Math.random() * 20 + 5}px`;
+          star.style.animationDuration = `${Math.random() * 5 + 2}s`;
+          document.body.appendChild(star);
+          setTimeout(() => {
+            star.remove();
+          }, 10000); // 10초 후에 별을 제거합니다.
+        }
+      
+        // 일정한 간격으로 별을 생성합니다.
+        setInterval(createStar, 1000);
+      </script>
+
+  </body>
+>>>>>>> 2786377c6c83997ecd764cbfefc2caed9eb5a27b
 </html>
