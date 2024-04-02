@@ -1,0 +1,47 @@
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center; 
+  }
+  body{
+    font-family: 'Noto Serif KR', serif;
+  }
+  form{
+     display: flex;
+     flex-direction: row-reverse;
+  }
+  form input 
+  form button {
+    padding: 10px;
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  ul {
+    margin-top: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  li button {
+    padding: 4px;
+    border: none;
+    background-color: transparent;
+  }
+  
+  li div.title {
+    display: inline-block;
+    margin-left: 6px;
+  }
+  
+  li.completed {
+    text-decoration: line-through;
+    color: #ccc;
+  }
